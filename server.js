@@ -209,7 +209,12 @@ cron.schedule('0 0 * * *', async () => {
 });
 
 // Start server
-app.listen(PORT, () => {
-    console.log(`🚀 Server is running on http://localhost:${PORT}`);
-    console.log('📚 English Vocabulary App is ready!');
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`🚀 Server is running on http://localhost:${PORT}`);
+        console.log('📚 English Vocabulary App is ready!');
+    });
+}
+
+// Export for Vercel
+module.exports = app;

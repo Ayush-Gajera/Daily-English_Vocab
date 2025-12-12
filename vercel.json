@@ -17,8 +17,8 @@
         }
     ],
     "env": {
-        "MONGODB_URI": "@MONGODB_URI",
-        "GEMINI_API_KEY": "@GEMINI_API_KEY",
+        "MONGODB_URI": "mongodb+srv://ayush:Ayush5050@watersupply.icg78ig.mongodb.net/?appName=watersupply",
+        "GEMINI_API_KEY": "AIzaSyBDsexLTnFMXRJskxE6XBOyCamHEHOuHtE",
         "PORT": "3000"
     }
 }

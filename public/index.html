@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enhance your English vocabulary with 10 new words daily">
+    <title>Daily English Vocabulary Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">📚</div>
+                    <h1 class="app-title">VocabDaily</h1>
+                </div>
+                <div class="date-display" id="currentDate"></div>
+            </div>
+            <p class="tagline">Master English, One Word at a Time</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <span class="stat-label">Words Today</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" id="totalDays">0</span>
+                    <span class="stat-label">Days Learned</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-primary" id="refreshBtn">
+                    <span class="btn-icon">🔄</span>
+                    Refresh Words
+                </button>
+                <button class="btn btn-secondary" id="historyBtn">
+                    <span class="btn-icon">📖</span>
+                    View History
+                </button>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-container" id="loadingState">
+                <div class="loader"></div>
+                <p class="loading-text">Loading today's vocabulary...</p>
+            </div>
+
+            <!-- Error State -->
+            <div class="error-container" id="errorState" style="display: none;">
+                <div class="error-icon">⚠️</div>
+                <h3 class="error-title">Oops! Something went wrong</h3>
+                <p class="error-message" id="errorMessage"></p>
+                <button class="btn btn-primary" onclick="location.reload()">Try Again</button>
+            </div>
+
+            <!-- Words Grid -->
+            <div class="words-grid" id="wordsGrid"></div>
+        </div>
+    </main>
+
+    <!-- History Modal -->
+    <div class="modal" id="historyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Learning History</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body" id="historyContent">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Powered by Google Gemini AI • Built with ❤️ for language learners</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
